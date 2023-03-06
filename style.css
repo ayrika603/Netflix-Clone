@@ -8,7 +8,7 @@
 
 body{
     background-color: black;
-    background-image: url("Desktop-1.png")
+    
     
     
 }
@@ -105,7 +105,7 @@ header .logo img
 
 #home::before{
     content: "";
-    background: url(/Desktop-1.png) no-repeat center center/cover;
+    background: url("Desktop-1.png") no-repeat center center/cover;
 
     /* filter: brightness(0.6); */
     position: absolute;
