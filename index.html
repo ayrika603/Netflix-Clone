@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix | Landing page UI Design</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/ff318f09c0.css" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="netflix-logo-png-2562.png"> </a>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Latest</a></li>
+            <li><a href="#">My List</a></li>
+            
+
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+            <span><img src="icons8-search.gif" alt="search" ></span>
+        </div>
+    </header>
+    <div id="home">
+        <!-- <img src="Desktop - 1.png" class="bg" alt="bg">  -->
+        <div class="content">
+            <img src="stranger-things-hd-38773.png" alt="banner" class="movieTitle" >
+            <h4>
+                <span>2022</span>
+                <span><i>16+</i></span>
+                <span>4 Seasons</span>
+                <span>Sci-Fi</span>
+            </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis a, repudiandae quisquam dolore aliquid in voluptatem omnis error placeat ad. Mollitia reprehenderit sequi inventore autem molestiae vero, modi sunt. Rerum.</p>
+            <div class="buttons">
+                <a href="#"><i class="fa-sharp fa-solid fa-play"></i>Play</a>
+                <a href="#"><i class="fa-solid fa-plus"></i>My List</a>
+            </div>
+        </div>
+        <a class="play" onclick="toggleVideo();"><img src="icons8-play-button-circled-50.png" >Watch Trailer</a>
+    </div>
+    <div class="trailer active">
+        <video src="Y2Mate.is - Stranger Things  Official Final Trailer  Netflix-b9EkMc79ZSU-720p-1658245953802.mp4" controls="true" autoplay="true"></video>
+        <img src="icons8-close-50.png" class="close" onclick="toggleVideo();">
+    </div>
+
+    <script>
+        function toggleVideo(){
+            const trailer = document.querySelector('.trailer');
+            const video = document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime=0;
+            video.pause();
+            
+            
+
+        }
+    </script>
+
+    <script src="https://kit.fontawesome.com/ff318f09c0.js" crossorigin="anonymous"></script>
+</body>
+</html>

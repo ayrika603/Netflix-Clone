@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: black;
+    
+    
+}
+
+header{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index:100;
+
+
+}
+
+header .logo img
+{
+    max-width: 150px;
+
+}
+.navigation{
+    display: flex;
+}
+
+.navigation li{
+    list-style: none;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navigation li a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.navigation li :hover a
+{
+    color: #de0611;
+}
+.search{
+    position: relative;
+    width: 300px;
+    height:40px ;
+}
+.search input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+    outline: none;
+    border-radius: 4px;
+    padding: 0 10px 0 45px;
+    backdrop-filter: blur(10px);
+}
+
+.search input::placeholder
+{
+    color: #fff;
+
+}
+
+.search span img{
+    position: absolute;
+    top: 50%;
+    left:10px;
+    transform: translateY(-50%);
+    padding-right: 10px;
+    color:#fff;
+    width:36px;
+    height:25px;
+    filter: invert(1);
+
+}
+
+#home{
+    display: flex;
+    /* background: url(/Desktop\ -\ 1.png) no-repeat center center/cover; */
+
+    flex-direction: column;
+    padding: 3px 200px;
+    padding-bottom: 100px;
+    height: 628px;
+    justify-content:right;
+    align-items: center;
+}
+
+#home::before{
+    content: "";
+    background: url(/Desktop\ -\ 1.png) no-repeat center center/cover;
+
+    /* filter: brightness(0.6); */
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+.content{
+    top: 212px;
+    left: -409px;
+    right:0px;
+    position: relative;
+    z-index: 1;
+    max-width:550px
+}
+.movieTitle{
+    max-width: 250px;
+    padding-bottom: 32px;
+
+}
+#home .content h4{
+    
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+}
+#home .content h4 span{
+    padding: 0 10px;
+    border-right: 1px solid rgba(255,255,255,0.5);
+}
+
+#home .content h4 span:last-child{
+    border-right: none;
+}
+#home .content h4 span:first-child{
+    padding-left:0;
+}
+
+#home .content h4 span i{
+    background: #de0611;
+    color: #fff;
+    padding: 0 8px;
+    display: inline-block;
+    font-style:normal;
+    border-radius: 2px;
+
+}
+#home .content p{
+    font-size: 1em;
+    font-weight:300;
+    line-height: 1.5em;
+    color:#fff;
+    margin: 10px 0 20px;
+}
+
+#home .content .buttons{
+    position: relative;
+
+}
+#home .content .buttons a{
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    background: #de0611;
+    color: #fff;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-weight:500;
+    letter-spacing:1px;
+    text-transform: uppercase;
+}
+#home .content .buttons a i{
+    padding-right: 12px;
+
+}
+#home .content .buttons a:nth-child(2){
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+
+}
+#home .content .buttons a:hover:nth-child(2){
+    background: #de0611;
+}
+.play
+{
+    position: absolute;
+    bottom: 50px;
+    
+    display: flex;
+    left: 80px;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.play img{
+    filter: invert(1);
+    margin-right: 20px;
+    max-width: 50px;
+}
+
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 100000;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    visibility:hidden ;
+    opacity: 0;
+
+}
+
+.trailer .active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.trailer video{
+    max-width: 900px;
+    outline: none;
+}
+
+.close{
+    position: absolute;
+    top: 30px;
+    right:30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width:32px;
+}
+
+@media(max-width: 991px){
+    header
+    {
+        padding: 20px 50px;
+        flex-direction:column;
+
+    }
+    .navigation{
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin:10px 0;
+    }
+    .banner{
+        padding: 100px 50px;
+    }
+    .banner .play{
+        left:50px;
+        font-size: 1em;
+
+    }
+    .play img{
+        margin-right:10px;
+        max-width: 40px;
+    }
+    .trailer video{
+        max-width: 90%;
+    }
+}
+
+@media(max-width: 600px){
+    header{
+        padding: 20px;
+    }
+}
